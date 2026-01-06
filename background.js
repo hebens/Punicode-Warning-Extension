@@ -77,3 +77,45 @@ api.tabs.onActivated.addListener(async ({ tabId }) => {
     // Tab evtl. nicht verfügbar
   }
 });
+
+function isAllowedDomain(unicodeDomain) {
+  return config.allowlist.includes(unicodeDomain);
+}
+
+function containsMixedScripts(domain) {
+  const scripts = new Set();
+
+  for (const char of domain) {
+    if (char === "." || char === "-") continue;
+    scripts.add(char.script || char.constructor.name);
+  }
+
+  return scripts.size > 1;
+}
+
+function containsSuspiciousUnicode(domain) {
+  const suspiciousChars = /[ıаοе]/u;
+  return suspiciousChars.test(domain);
+}
+
+api.webRequest.onBeforeRequest.addListener(
+  (details) => {
+    const url = new URL(details.url);
+    const unicodeDomain = url.hostname;
+
+    if (isAllowedDomain(unicodeDomain)) {
+      return {};
+    }
+
+    if (
+      containsMixedScripts(unicodeDomain) ||
+      containsSuspiciousUnicode(unicodeDomain)
+    ) {
+      return { cancel: true };
+    }
+
+    return {};
+  },
+  { urls: ["<all_urls>"], types: ["main_frame"] },
+  ["blocking"]
+);
