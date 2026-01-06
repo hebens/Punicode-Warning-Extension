@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sicherheitswarnung – Verdächtige Domain</title>
+  <link rel="stylesheet" href="warning.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="icon">⚠️</div>
+
+    <h1>Mögliche Phishing-Domain erkannt</h1>
+
+    <p class="intro">
+      Die aufgerufene Website verwendet ungewöhnliche Unicode-Zeichen,
+      die zur Täuschung eingesetzt werden können.
+    </p>
+
+    <div class="details">
+      <div>
+        <strong>Domain</strong>
+        <code id="domain"></code>
+      </div>
+
+      <div>
+        <strong>Grund</strong>
+        <ul id="reasons"></ul>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="cancel" class="secondary">
+        Abbrechen
+      </button>
+      <button id="proceed" class="danger">
+        Trotzdem fortfahren
+      </button>
+    </div>
+
+    <p class="footer">
+      Tipp: Seriöse Websites verwenden normalerweise keine
+      visuell ähnlichen Unicode-Zeichen.
+    </p>
+  </div>
+
+  <script src="warning.js"></script>
+</body>
+</html>
