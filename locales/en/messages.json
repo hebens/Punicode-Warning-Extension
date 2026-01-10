@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Possible Phishing-Domain detected"
+  },
+  "intro": {
+    "message": "This website uses Unicode characters that can be used for deception."
+  },
+  "domainLabel": {
+    "message": "Domain"
+  },
+  "reasonPunycode": {
+    "message": "Domain uses Punycode (IDN)"
+  },
+  "reasonLookalike": {
+    "message": "Unicode characters resemble Latin letters"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "proceed": {
+    "message": "Proceed anyway"
+  },
+  "footer": {
+    "message": "Serious Websites use normal Unicode characters."
+  }
+}

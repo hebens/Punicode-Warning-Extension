@@ -1,47 +1,48 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="">
 <head>
   <meta charset="UTF-8" />
-  <title>Sicherheitswarnung – Verdächtige Domain</title>
+  <title data-i18n="title"></title>
   <link rel="stylesheet" href="warning.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="icon">⚠️</div>
+  <main class="container" role="alertdialog" aria-labelledby="headline">
 
-    <h1>Mögliche Phishing-Domain erkannt</h1>
+    <div class="icon" aria-hidden="true">⚠️</div>
 
-    <p class="intro">
-      Die aufgerufene Website verwendet ungewöhnliche Unicode-Zeichen,
-      die zur Täuschung eingesetzt werden können.
-    </p>
+    <h1 id="headline" data-i18n="title"></h1>
 
-    <div class="details">
-      <div>
-        <strong>Domain</strong>
+    <p class="intro" data-i18n="intro"></p>
+
+    <section class="details">
+      <div class="row">
+        <strong data-i18n="domainLabel"></strong>
         <code id="domain"></code>
       </div>
 
-      <div>
-        <strong>Grund</strong>
+      <div class="row">
+        <strong data-i18n="reasonLabel"></strong>
         <ul id="reasons"></ul>
       </div>
-    </div>
+    </section>
 
-    <div class="actions">
-      <button id="cancel" class="secondary">
-        Abbrechen
+    <section class="actions">
+      <button id="cancel"
+              class="secondary"
+              data-i18n="cancel"
+              aria-label="">
       </button>
-      <button id="proceed" class="danger">
-        Trotzdem fortfahren
-      </button>
-    </div>
 
-    <p class="footer">
-      Tipp: Seriöse Websites verwenden normalerweise keine
-      visuell ähnlichen Unicode-Zeichen.
-    </p>
-  </div>
+      <button id="proceed"
+              class="danger"
+              data-i18n="proceed"
+              aria-label="">
+      </button>
+    </section>
+
+    <footer class="footer" data-i18n="footer"></footer>
+
+  </main>
 
   <script src="warning.js"></script>
 </body>
