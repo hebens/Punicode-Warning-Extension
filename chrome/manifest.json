@@ -17,10 +17,7 @@
   ],
   "host_permissions": [
     "<all_urls>"
-],
-  "icons": {
-    "128": "icons/icon-128.png"
-  },
+  ],
   "browser_specific_settings": {
     "gecko": {
       "id": "punycode-warning@example.com"

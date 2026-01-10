@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Mögliche Phishing-Domain erkannt"
+  },
+  "intro": {
+    "message": "Diese Website verwendet Unicode-Zeichen, die zur Täuschung eingesetzt werden können."
+  },
+  "domainLabel": {
+    "message": "Domain"
+  },
+  "reasonPunycode": {
+    "message": "Domain verwendet Punycode (IDN)"
+  },
+  "reasonLookalike": {
+    "message": "Unicode-Zeichen ähneln lateinischen Buchstaben"
+  },
+  "cancel": {
+    "message": "Abbrechen"
+  },
+  "proceed": {
+    "message": "Trotzdem fortfahren"
+  },
+  "footer": {
+    "message": "Seriöse Websites verwenden normalerweise keine visuell ähnlichen Unicode-Zeichen."
+  }
+}

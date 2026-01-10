@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="title"></title>
+  <link rel="stylesheet" href="warning.css" />
+</head>
+<body>
+  <main class="container" role="alertdialog" aria-labelledby="headline">
+
+    <div class="icon" aria-hidden="true">⚠️</div>
+
+    <h1 id="headline" data-i18n="title"></h1>
+
+    <p class="intro" data-i18n="intro"></p>
+
+    <section class="details">
+      <div class="row">
+        <strong data-i18n="domainLabel"></strong>
+        <code id="domain"></code>
+      </div>
+
+      <div class="row">
+        <strong data-i18n="reasonLabel"></strong>
+        <ul id="reasons"></ul>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="cancel"
+              class="secondary"
+              data-i18n="cancel"
+              aria-label="">
+      </button>
+
+      <button id="proceed"
+              class="danger"
+              data-i18n="proceed"
+              aria-label="">
+      </button>
+    </section>
+
+    <footer class="footer" data-i18n="footer"></footer>
+
+  </main>
+
+  <script src="warning.js"></script>
+</body>
+</html>
